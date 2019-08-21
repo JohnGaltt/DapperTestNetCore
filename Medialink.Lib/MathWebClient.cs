@@ -30,7 +30,7 @@ namespace Medialink.Lib
             var value = _restClient.Get(new RestRequest($"add?a={a}&b={b}", Method.GET));
             var sum = a + b;
 
-            _importantObjectRepository.Insert(a + b);
+            _importantObjectRepository.Insert(sum);
 
             return Convert.ToInt32(sum);
         }
@@ -40,7 +40,7 @@ namespace Medialink.Lib
             var value = _restClient.Get(new RestRequest($"multiply?a={a}&b={b}", Method.GET));
             var product = a * b;
 
-             _importantObjectRepository.Insert(a * b);
+             _importantObjectRepository.Insert(product);
 
 
             return Convert.ToInt32(product);
@@ -51,7 +51,7 @@ namespace Medialink.Lib
             var value = _restClient.Get(new RestRequest($"divide?a={a}&b={b}", Method.GET));
             var quotient = a / b;
 
-             _importantObjectRepository.Insert(a / b);
+             _importantObjectRepository.Insert(quotient);
 
             return Convert.ToInt32(quotient);
         }

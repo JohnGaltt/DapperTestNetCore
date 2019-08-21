@@ -20,12 +20,5 @@ namespace Medialink.Lib.Infrastructure.Repositories
                 .GetConnection()
                 .ExecuteAsync("INSERT INTO ImportantObject VALUES(" + sum + ")");
         }
-
-        public ImportantObject Get(int value)
-        {
-            return _databaseConnectionFactory
-                 .GetConnection()
-                 .QueryFirst<ImportantObject>("SELECT * FROM ImportantObject WHERE Value = " + value);
-        }
     }
 }

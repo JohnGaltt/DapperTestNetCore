@@ -50,7 +50,6 @@ namespace Medialink.Lib.Tests
             var resultValue = _webClientTest.Add(a, b);
 
             Assert.AreEqual(expected, resultValue);
-            //_mockLogger.Verify(x => x.Log(LogLevel.Information, It.IsAny<EventId>(), It.IsAny<FormattedLogValues>(), It.IsAny<Exception>(), It.IsAny<Func<object, Exception, string>>()), Times.Once);
         }
 
         [TestCase(1, 2)]
